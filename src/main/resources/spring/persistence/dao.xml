@@ -18,7 +18,7 @@
     </bean>
 
     <!-- Beans für DAOs -->
-    <bean id="eintragDao" class="temp.temp.persistence.verwaltung.dao.jpa.JpaEintragDao"
+    <bean id="eintragDao" class="de.reineckm.test.isyfact.persistence.verwaltung.dao.jpa.JpaEintragDao"
           parent="abstractDao"/>
 
     <!-- Factory-Bean, um den Shared-Entity-Manager für die DAOs zu erzeugen -->
@@ -28,13 +28,13 @@
     </bean>
 
     <bean id="dataSource" class="org.h2.jdbcx.JdbcDataSource" primary="true">
-        <property name="url" value="jdbc:h2:mem:temp;DB_CLOSE_DELAY=-1"/>
+        <property name="url" value="jdbc:h2:mem:isyfact;DB_CLOSE_DELAY=-1"/>
     </bean>
 
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceProviderClass" value="org.hibernate.jpa.HibernatePersistenceProvider"/>
-        <property name="packagesToScan" value="temp.temp.persistence"/>
+        <property name="packagesToScan" value="de.reineckm.test.isyfact.persistence"/>
         <property name="dataSource" ref="dataSource"/>
         <property name="jpaDialect">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>

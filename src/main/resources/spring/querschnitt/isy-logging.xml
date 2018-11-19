@@ -36,7 +36,7 @@
     <aop:config>
         <!-- Pointcuts an den Komponentengrenzen -->
         <aop:advisor order="1000" advice-ref="componentLogInterceptor"
-                     pointcut="execution (public * temp.temp.core.*.*.*(..))"/>
+                     pointcut="execution (public * de.reineckm.test.isyfact.core.*.*.*(..))"/>
     </aop:config>
 
 </beans>
