@@ -1,6 +1,5 @@
 function ladeEintraege() {
-	$
-			.ajax({
+	$.ajax({
 				type : "GET",
 				url : "eintrag",
 				contentType : "application/json; charset=utf-8",
@@ -10,27 +9,6 @@ function ladeEintraege() {
 
 					for ( var i in data) {
 						eintragAnzeigen(data[i].verfasser, data[i].text,
-								data[i].datum);
-					}
-				},
-				error : function(jqXHR, status) {
-					alert(status);
-				}
-			});
-}
-
-function ladeAntraege() {
-	$
-			.ajax({
-				type : "GET",
-				url : "antrag",
-				contentType : "application/json; charset=utf-8",
-				dataType : "json",
-				success : function(data, status, jqXHR) {
-					$('#antraege').empty();
-
-					for ( var i in data) {
-						antragAnzeigen(data[i].verfasser, data[i].text,
 								data[i].datum);
 					}
 				},
@@ -58,26 +36,6 @@ function eintragAnzeigen(verfasser, text, datum) {
 	li.appendChild(verfasserElement);
 
 	$('#eintraege').prepend(li);
-}
-
-function antragAnzeigen() {
-//	var eintragText = document.createTextNode(text);
-//	var verfasserText = document.createTextNode(verfasser + ' am '
-//			+ $.format.toBrowserTimeZone(datum, "dd.MM.yyyy") + ' um '
-//			+ $.format.toBrowserTimeZone(datum, "HH:mm:ss"));
-//
-//	var textElement = document.createElement("antrag");
-//	var verfasserElement = document.createElement("verfasser");
-//
-//	textElement.appendChild(eintragText);
-//	verfasserElement.appendChild(verfasserText);
-//
-//	var li = document.createElement("li");
-//
-//	li.appendChild(textElement);
-//	li.appendChild(verfasserElement);
-//
-//	$('#antaege').prepend(li);
 }
 
 function neuenEintragErstellen() {
@@ -120,6 +78,26 @@ function neuenEintragErstellen() {
 		error : function(response, status, error) {
 			var error = JSON.parse(response.responseText);
 			alert(error.message);
+		}
+	});
+}
+
+function ladeKitas() {
+	$.ajax({
+		type : "GET",
+		url : "http://prodigy84.pythonanywhere.com/api/kitas",
+		contentType : "application/json; charset=utf-8",
+		dataType : "json",
+		success : function(data, status, jqXHR) {
+            var list_html = "<ol>";
+            for( var i=0; i <data.length; i++) {
+               list_html += "<li>" + data[i].STADTBEZIRK + "</li>";
+             }
+            list_html += "</ol>"
+            $("#kitas").html(list_html);
+		},
+		error : function(jqXHR, textStatus, errorThrown) {
+			//alert(textStatus + ": " + errorThrown);
 		}
 	});
 }
