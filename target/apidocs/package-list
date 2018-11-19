@@ -1,0 +1,8 @@
+temp.temp.core.verwaltung
+temp.temp.core.verwaltung.ausgabedaten
+temp.temp.core.verwaltung.eingabedaten
+temp.temp.core.verwaltung.impl
+temp.temp.persistence.verwaltung.dao
+temp.temp.persistence.verwaltung.dao.jpa
+temp.temp.persistence.verwaltung.entity
+temp.temp.service.rest

@@ -1,0 +1,11 @@
+/home/developer/workspace/temp/src/main/java/temp/temp/persistence/verwaltung/entity/Eintrag.java
+/home/developer/workspace/temp/src/main/java/temp/temp/persistence/verwaltung/dao/EintragDao.java
+/home/developer/workspace/temp/src/main/java/temp/temp/core/verwaltung/impl/VerwaltungImpl.java
+/home/developer/workspace/temp/src/main/java/temp/temp/service/rest/CustomObjectMapperFactory.java
+/home/developer/workspace/temp/src/main/java/temp/temp/persistence/verwaltung/entity/ZonedDateTimeAttributeConverter.java
+/home/developer/workspace/temp/src/main/java/temp/temp/service/rest/EintragController.java
+/home/developer/workspace/temp/src/main/java/temp/temp/persistence/verwaltung/dao/jpa/JpaEintragDao.java
+/home/developer/workspace/temp/src/main/java/temp/temp/core/verwaltung/eingabedaten/NeuerEintrag.java
+/home/developer/workspace/temp/src/main/java/temp/temp/core/verwaltung/ausgabedaten/EintragDaten.java
+/home/developer/workspace/temp/src/main/java/temp/temp/core/verwaltung/Verwaltung.java
+/home/developer/workspace/temp/src/main/java/temp/temp/service/rest/ExceptionJsonInfo.java
